@@ -31,7 +31,7 @@ public class FragmentThree extends Fragment {
             @Override
             public void onClick(View view) {
                 String message = prev + "\n" + editText.getText().toString();
-                mIntercom.collect(message);
+                mIntercom.msgFromFragThree(message);
             }
         });
     }
@@ -41,6 +41,6 @@ public class FragmentThree extends Fragment {
     }
 
     interface Intercom {
-        void collect(String message);
+        void msgFromFragThree(String message);
     }
 }

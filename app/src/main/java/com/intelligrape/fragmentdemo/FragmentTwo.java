@@ -30,7 +30,7 @@ public class FragmentTwo extends Fragment {
             @Override
             public void onClick(View view) {
                 String message = etMessage.getText().toString();
-                mIntercom.sendMessage(message);
+                mIntercom.msgFromFragTwo(message);
             }
         });
     }
@@ -40,6 +40,6 @@ public class FragmentTwo extends Fragment {
     }
 
     interface Intercom {
-        void sendMessage(String message);
+        void msgFromFragTwo(String message);
     }
 }

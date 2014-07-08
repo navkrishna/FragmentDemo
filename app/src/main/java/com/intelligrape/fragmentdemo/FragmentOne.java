@@ -51,7 +51,7 @@ public class FragmentOne extends Fragment {
         btnRequest.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mIntercom.requestMessage(0);
+                mIntercom.msgFromFragOne(0);
             }
         });
 
@@ -59,7 +59,7 @@ public class FragmentOne extends Fragment {
         btnRequest2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mIntercom.requestMessage(1);
+                mIntercom.msgFromFragOne(1);
             }
         });
     }
@@ -69,6 +69,6 @@ public class FragmentOne extends Fragment {
     }
 
     interface Intercom {
-        void requestMessage(int index);
+        void msgFromFragOne(int index);
     }
 }

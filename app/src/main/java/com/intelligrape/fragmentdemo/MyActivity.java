@@ -11,9 +11,6 @@ import android.widget.Toast;
 
 public class MyActivity extends ActionBarActivity implements FragmentOne.Intercom, FragmentTwo.Intercom, FragmentThree.Intercom {
 
-//    FragmentManager manager;
-//    FragmentTransaction transaction;
-
     int currentIndex = 0;
 
     @Override
@@ -34,7 +31,7 @@ public class MyActivity extends ActionBarActivity implements FragmentOne.Interco
     }
 
     @Override
-    public void requestMessage(int index) {
+    public void msgFromFragOne(int index) {
         currentIndex = index;
 
         FragmentManager manager = getSupportFragmentManager();
@@ -49,7 +46,7 @@ public class MyActivity extends ActionBarActivity implements FragmentOne.Interco
     }
 
     @Override
-    public void sendMessage(String message) {
+    public void msgFromFragTwo(String message) {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
 
@@ -63,15 +60,13 @@ public class MyActivity extends ActionBarActivity implements FragmentOne.Interco
     }
 
     @Override
-    public void collect(String message) {
+    public void msgFromFragThree(String message) {
         FragmentManager manager = getSupportFragmentManager();
         FragmentTransaction transaction = manager.beginTransaction();
 
         FragmentOne f1 = (FragmentOne) manager.findFragmentByTag("frag1");
         FragmentThree f3 = (FragmentThree) manager.findFragmentByTag("frag3");
         transaction.detach(f3);
-//        transaction.attach(f1);
-//        transaction.addToBackStack("frag3Detach");
         manager.popBackStack("frag2Add", 1);
 
         if (f1 != null) {
