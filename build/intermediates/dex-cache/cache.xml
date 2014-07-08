@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="/home/intelligrape/AndroidStudioProjects/FragmentDemo/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-b7b6293cac523b0a047d906f7685ed8db64a8f34.jar"
+        jar="/home/intelligrape/Documents/android_dev/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+    <item
+        dex="/home/intelligrape/AndroidStudioProjects/FragmentDemo/app/build/intermediates/pre-dexed/debug/classes-0d165233d4247489efc250a9be858d6e4c479c82.jar"
+        jar="/home/intelligrape/AndroidStudioProjects/FragmentDemo/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        jumboMode="false"
+        revision="19.1.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+
+</pre-dex-items>
